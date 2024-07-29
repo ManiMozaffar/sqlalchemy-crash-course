@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sqla"
+version = "0.1.0"
+description = ""
+authors = ["Mani Mozaffar <mani.mozaffar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = { extras = ["asyncio"], version = "^2.0.31" }
+greenlet = "^3.0.3"
+asyncpg = "^0.29.0"
+ruff = "^0.5.5"
+rich = "^13.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
