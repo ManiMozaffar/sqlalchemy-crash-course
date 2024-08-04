@@ -10,8 +10,8 @@ async def fn():
         query = sa.select(sa.literal(1).label("one"), sa.literal(2).label("two"))
         print(query.compile())
 
-        result: sa.CursorResult[tuple[int, int]] = await transaction.execute(query)
-        all_result: list[sa.Row[tuple[int, int]]] = list(result.all())
+        result = await transaction.execute(query)
+        all_result = list(result.all())
         row = all_result[0]
         print("Row `one`: ", row.one)
         print("Dictionary: ", row._asdict())
